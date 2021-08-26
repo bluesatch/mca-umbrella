@@ -5,6 +5,8 @@
     --secondary: #485625;
     --subHead: #676767;
     --lightGray: #d7d7d7;
+    --formBg: #fafafa;
+    --bottomBg: #202020;
 }
 
 body {
@@ -28,6 +30,26 @@ ul {
 
 li {
     list-style: none;
+}
+
+.btn {
+    background: var(--primary);
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    border-radius: 0;
+    font-size: clamp(0.8rem, 1vw, 1rem);
+}
+
+.btn:hover {
+    filter: brightness(90%);
+}
+
+.btn:active {
+    filter: brightness(50%);
+}
+
+a:hover {
+    text-decoration: none;
 }
 
 /* header section */
@@ -113,6 +135,11 @@ li {
 .icon-row {
     padding: 2rem;
     border-top: 2px dashed var(--lightGray);
+}
+
+.icon-row img {
+    width: 4rem;
+    filter: invert(100%);
 }
 
 .icon-outer {
@@ -202,19 +229,6 @@ li {
     font-size: 0.8rem;
 }
 
-.card-buttons > .btn {
-    background: var(--primary);
-    color: white;
-}
-
-.card-buttons > .btn:hover {
-    filter: brightness(90%);
-}
-
-.card-buttons > .btn:active {
-    filter: brightness(50%);
-}
-
 .ad-row {
     position: relative;
     padding: 2rem;
@@ -280,8 +294,9 @@ li {
     border: 0;
 }
 
-.list-group-item img {
-    filter: invert(99%) sepia(0%) saturate(1%) hue-rotate(180deg) brightness(90%) contrast(95%) drop-shadow(1px 1px 1px black);;
+.main-footer .list-group-item img {
+    width: clamp(1.2rem, 2vw, 2rem);
+    filter: invert(99%) sepia(0%) saturate(1%) hue-rotate(180deg) brightness(90%) contrast(95%) drop-shadow(1px 1px 1px black);
 }
 
 .archive-list-item {
@@ -289,6 +304,57 @@ li {
     border-top: 1px dashed var(--lightGray);
 }
 
+.archive-list-item a {
+    color: black;
+}
+
+.archive-list-item a:hover {
+    color: black;
+}
+
 .archive-list-item:nth-child(1) {
     border-top: 0;
+}
+
+.contact-list-item {
+    padding: 0.5rem 0;
+}
+
+.contact-list-item img {
+    width: clamp(1.2rem, 2vw, 2rem);
+    filter: invert(99%) sepia(0%) saturate(1%) hue-rotate(180deg) brightness(90%) contrast(95%);
+}
+
+.signup-form input {
+    background: var(--formBg);
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    border: 0;
+    border-bottom: 1px solid var(--lightGray);
+}
+
+.signup-form input:focus {
+    outline: none;
+    border: 0;
+    border-bottom: 1px solid var(--lightGray);
+}
+
+.signup-form input::placeholder {
+    opacity: 100%;
+}
+
+.bottom-header {
+    background: var(--bottomBg);
+}
+
+.bottom-header a {
+    color: white;
+    font-weight: bold;
+    font-size: 10px;
+}
+
+.copyright {
+    color: white;
+    font-weight: bold;
+    font-size: 10px;
 }
