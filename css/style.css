@@ -204,6 +204,10 @@ a:hover {
     border: 0;
 }
 
+.card > .row {
+    height: 100%;
+}
+
 .card > .row >.col {
     margin: 0;
     padding: 0;
